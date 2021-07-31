@@ -30,9 +30,10 @@ ALLOWED_HOSTS = []
 
 #Proporcionar acceso a la API
 CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:8000',
     'http://localhost:4200',
 ]
-
 
 # Application definition
 
