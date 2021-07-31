@@ -8,7 +8,10 @@ import { ApiService } from './api.service';
   providers: [ApiService]
 })
 export class AppComponent {
-  movies = [{title: 'test'}]
+  movies = [{title: 'test'}];
+  title:any;
+  desc:any;
+  year:any;
 
   constructor(private api:ApiService) {
     this.getMovies();
@@ -28,7 +31,9 @@ export class AppComponent {
   movieClicked = (movie:any) => {
     this.api.getOneMovie(movie.id).subscribe( //obtenemos los datos de una movie para mostrarlos
       data => {
-        console.log(data);
+        this.title = data.title;
+        this.desc = data.desc;
+        this.year = data.year;
       },
       error => {
         console.log(error); //para controlar el error
