@@ -31,7 +31,6 @@ export class AppComponent {
     this.api.getOneMovie(movie.id).subscribe( //obtenemos los datos de una movie para mostrarlos
       data => {
         this.selectedMovie = data;
-
       },
       error => {
         console.log(error); //para controlar el error
@@ -40,8 +39,14 @@ export class AppComponent {
   }
 
   updateMovie = () => {
-
-
+    this.api.updateMovie(this.selectedMovie).subscribe( //obtenemos los datos de una movie para mostrarlos
+      data => {
+        this.selectedMovie = data;
+      },
+      error => {
+        console.log(error); //para controlar el error
+      }
+    );
   }
 
 

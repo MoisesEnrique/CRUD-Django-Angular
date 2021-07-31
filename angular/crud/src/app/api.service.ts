@@ -24,5 +24,10 @@ export class ApiService {
     {headers: this.httpHeaders}); 
   }
 
+  updateMovie(movie:any) : Observable<any>{   /* Metodo para actualizar las peliculas  */
+    const body = {title: movie.title, desc: movie.desc, year: movie.year};
+    return this.http.put(this.baseurl + '/movies/' + movie.id + '/', body, //pasamos la ide para ver la info de la pelicula
+    {headers: this.httpHeaders}); 
+  }
   
 }
