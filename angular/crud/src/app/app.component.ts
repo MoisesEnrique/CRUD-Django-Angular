@@ -41,7 +41,7 @@ export class AppComponent {
   updateMovie = () => {
     this.api.updateMovie(this.selectedMovie).subscribe( //obtenemos los datos para actualizar
       data => {
-        this.selectedMovie = data;
+        this.getMovies();   //mostrar la lista de peliculas
       },
       error => {
         console.log(error); //para controlar el error
@@ -60,6 +60,15 @@ export class AppComponent {
     );
   }
 
-
+  deleteMovie = () => {
+    this.api.deleteMovie(this.selectedMovie.id).subscribe( //obtenemos la id de la pelicula a eliminar
+      data => {
+        this.getMovies();   //mostrar la lista de peliculas
+      },
+      error => {
+        console.log(error); //para controlar el error
+      }
+    );
+  }
 
 }

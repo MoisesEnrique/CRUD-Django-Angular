@@ -35,5 +35,10 @@ export class ApiService {
     return this.http.post(this.baseurl + '/movies/', body, //post para enviar los datos
     {headers: this.httpHeaders}); 
   }
+
+  deleteMovie(id:any) : Observable<any>{   /* Metodo para eliminar una pelicula  */
+    return this.http.delete(this.baseurl + '/movies/' + id + '/', //delete para eliminar
+    {headers: this.httpHeaders}); 
+  }
   
 }
