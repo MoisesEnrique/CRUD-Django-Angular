@@ -10,7 +10,9 @@
 Title <input type="text" [(ngModel)]="selectedMovie.title"/><br><br>
 Description <input type="text" [(ngModel)]="selectedMovie.desc"/><br><br>
 Year <input type="text" [(ngModel)]="selectedMovie.year"/><br><br>
-
+<button *ngIf="selectedMovie.id !=-1" (click)="updateMovie()"> UPDATE </button>
+<button *ngIf="selectedMovie.id ==-1" (click)="createMovie()"> CREATE </button>
+<button *ngIf="selectedMovie.id !=-1" (click)="deleteMovie()"> DELETE </button>
 <!--- SI id es -1 no mostrar botones update, delet. Si es -1 mostrar solo create-->
 
 <router-outlet></router-outlet>
