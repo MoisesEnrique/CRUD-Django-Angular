@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  baseurl = "http://127.0.0.1:8000";   /* la direccion base de django */
+  baseurl = "http://localhost:8000";   /* la direccion base de django */
 
   /* aplicacion jason */
   httpHeaders = new HttpHeaders({ 'Content-type': 'application/json'});
