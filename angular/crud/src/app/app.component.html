@@ -11,5 +11,7 @@ Title <input type="text" [(ngModel)]="selectedMovie.title"/><br><br>
 Description <input type="text" [(ngModel)]="selectedMovie.desc"/><br><br>
 Year <input type="text" [(ngModel)]="selectedMovie.year"/><br><br>
 <button (click)="updateMovie()"> UPDATE </button>
+<button (click)="createMovie()"> CREATE </button>
+<button (click)="deleteMovie()"> DELETE </button>
 
 <router-outlet></router-outlet>

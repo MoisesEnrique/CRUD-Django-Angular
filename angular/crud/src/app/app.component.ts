@@ -39,7 +39,7 @@ export class AppComponent {
   }
 
   updateMovie = () => {
-    this.api.updateMovie(this.selectedMovie).subscribe( //obtenemos los datos de una movie para mostrarlos
+    this.api.updateMovie(this.selectedMovie).subscribe( //obtenemos los datos para actualizar
       data => {
         this.selectedMovie = data;
       },
@@ -48,6 +48,18 @@ export class AppComponent {
       }
     );
   }
+
+  createMovie = () => {
+    this.api.createMovie(this.selectedMovie).subscribe( //obtenemos los datos para crear
+      data => {
+        this.movies.push(data);   //push para guardar la data
+      },
+      error => {
+        console.log(error); //para controlar el error
+      }
+    );
+  }
+
 
 
 }
