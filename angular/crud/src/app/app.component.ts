@@ -15,12 +15,12 @@ export class AppComponent {
   }
 
   getMovies = () => {
-    this.api.getAllMovies().subscribe(
+    this.api.getAllMovies().subscribe( //obtenemos los datos y los asignamos a la variable movies
       data => {
         this.movies = data;
       },
       error => {
-        console.log(error);
+        console.log(error); //para controlar el error
       }
     )
   }
