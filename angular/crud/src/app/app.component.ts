@@ -22,6 +22,17 @@ export class AppComponent {
       error => {
         console.log(error); //para controlar el error
       }
-    )
+    );
+  }
+
+  movieClicked = (movie:any) => {
+    this.api.getOneMovie(movie.id).subscribe( //obtenemos los datos de una movie para mostrarlos
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error); //para controlar el error
+      }
+    );
   }
 }
