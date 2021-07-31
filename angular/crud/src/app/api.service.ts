@@ -9,8 +9,8 @@ export class ApiService {
 
   baseurl = "http://127.0.0.1:8000";   /* la direccion base de django */
 
-  /* encabezados del html */
-  httpHeaders = new HttpHeaders({ 'Content-type': 'application/json'})
+  /* aplicacion jason */
+  httpHeaders = new HttpHeaders({ 'Content-type': 'application/json'});
 
   constructor(private http: HttpClient) { } /* habilitamos el modelo http en el lado del cliente */
 
